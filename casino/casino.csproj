@@ -49,7 +49,7 @@
     <Compile Include="Lang.cs" />
     <Compile Include="NumberGen.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Properties.cs" />
+    <Compile Include="Properties\Properties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

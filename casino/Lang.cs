@@ -76,7 +76,7 @@ namespace casino
                     Lang.Locale.GameLose = "К сожалению, вы проиграли! Система создала число {3}. Вы потеряли {0} {2}, теперь ваш баланс составляет {1} {2}.";
                     Lang.Locale.YourBalance = "Ваш баланс составляет {0} {1}";
                     Lang.Locale.SelectLang = "Выберите язык:\n1) Русский\n2) English";
-                    Lang.Locale.SaveCash = "Ваш счет сохранен.";
+                    Lang.Locale.SaveCash = "";
                     Lang.Locale.GameMessage = "Ваш баланс составляет {0} {1}.\n Введите сумму которую хотите поставить.";
                     Lang.Locale.HelpMessage = "Команды состоят только из строчных букв.\nСписок команд:\n play - Сделать ставку.\n balance - Проверка баланса.\n deposit - Пополнение счета.\n about - О программе.\n lang - Выбрать язык.\n exit - Выход.";
                 }
