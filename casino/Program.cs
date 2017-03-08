@@ -10,12 +10,12 @@ namespace casino
 {
     class Program
     {
-        public static void createMenu()
+        public static void MenuLoop()
         {
             Console.Write("> ");
             string g = Convert.ToString(Console.ReadLine());
             Interpreter.Command(g);
-            createMenu();
+            MenuLoop();
         }
         public static void initConsole()
         {
@@ -25,7 +25,7 @@ namespace casino
             Console.Clear();
             Console.Title = Properties.App.Name;
             Console.WriteLine(Lang.Locale.Welcome);
-            createMenu();
+            MenuLoop();
         }
         static void Main(string[] args)
         {

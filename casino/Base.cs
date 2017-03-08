@@ -35,7 +35,7 @@ namespace casino
         {
             Console.Clear();
             Console.WriteLine(Lang.Locale.Welcome);
-            Program.createMenu();
+            Program.MenuLoop();
         }
         public static void Help()
         {

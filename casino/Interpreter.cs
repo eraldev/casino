@@ -10,12 +10,10 @@ namespace casino
     {
         private static void EmptyCommand()
         {
-            Console.Beep();
             Console.WriteLine(Lang.Locale.EmptyCommand);
         }
         private static void UnknownCommand()
         {
-            Console.Beep();
             Console.WriteLine("{0} : {1}.", Lang.Locale.Error, Lang.Locale.UnknownCommand);
         }
         public static void Command(string EnterCommand)
