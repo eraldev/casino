@@ -11,6 +11,8 @@ namespace casino
         public class Locale
         {
             public static string Welcome; // Выводится при запуске программы
+            public static string Exit; // Выводится при выходе
+            public static string ExitCancel; // Выводится при отмене выхода из программы
             public static string AboutMessage; // О программе
             public static string AboutAuthor; // Автор программы
             public static string UnknownCommand; // Выводится при вводе команды с ошибкой
@@ -26,6 +28,7 @@ namespace casino
             public static string GameWin; // Выводится при победе
             public static string GameLose; // Выводится при проигрыше
             public static string GetCash; // Выводится при снятии денег
+            public static string SaveCash; // Выводится при сохранении денег
             public static string DepositMessage; // Выводится при команде deposit
         }
 
@@ -58,7 +61,8 @@ namespace casino
                 {
                     Lang.Locale.Welcome = Properties.App.Name + "\nЧтобы отобразить список команд, введите help.";
                     Lang.Locale.Error = "Ошибка";
-
+                    Lang.Locale.ExitCancel = "Выход отменен.";
+                    Lang.Locale.Exit = "Вы собираетесь выйти из игры, что сделать с вашим выигрышем?\n 1) Вывести\n 2) Сохранить\n 3) Отмена!";
                     Lang.Locale.NotEnoughMoney = "Не хватает денег.";
                     Lang.Locale.DepositMessage = "Введите сумму пополнения.";
                     Lang.Locale.UnknownCommand = "Неизвестная команда";
@@ -72,6 +76,7 @@ namespace casino
                     Lang.Locale.GameLose = "К сожалению, вы проиграли! Система создала число {3}. Вы потеряли {0} {2}, теперь ваш баланс составляет {1} {2}.";
                     Lang.Locale.YourBalance = "Ваш баланс составляет {0} {1}";
                     Lang.Locale.SelectLang = "Выберите язык:\n1) Русский\n2) English";
+                    Lang.Locale.SaveCash = "Ваш счет сохранен.";
                     Lang.Locale.GameMessage = "Ваш баланс составляет {0} {1}.\n Введите сумму которую хотите поставить.";
                     Lang.Locale.HelpMessage = "Команды состоят только из строчных букв.\nСписок команд:\n play - Сделать ставку.\n balance - Проверка баланса.\n deposit - Пополнение счета.\n about - О программе.\n lang - Выбрать язык.\n exit - Выход.";
                 }

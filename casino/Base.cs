@@ -10,9 +10,26 @@ namespace casino
     {
         public static void Exit()
         {
-
-            Game.GetCash
-            Environment.Exit(0);
+            Console.WriteLine(Lang.Locale.Exit);
+            int Choice = Convert.ToInt32(Console.ReadLine());
+            switch (Choice)
+            {
+                case 1:
+                    Game.GetCash(-1);
+                    Environment.Exit(0);
+                    break;
+                case 2:
+                    Game.SaveCash();
+                    Environment.Exit(0);
+                    break;
+                case 3:
+                    Console.WriteLine(Lang.Locale.ExitCancel);
+                    break;
+                default:
+                    Console.WriteLine(Lang.Locale.Error);
+                    break;
+            }
+            
         }
         public static void Reload()
         {

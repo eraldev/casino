@@ -21,6 +21,10 @@ namespace casino
             Game.Player.Balance -= cash;
             Console.WriteLine(Lang.Locale.GetCash, cash, Lang.Locale.Currency, Game.Player.Balance);
         }
+        public static void SaveCash()
+        {
+            Console.WriteLine(Lang.Locale.SaveCash);
+        }
         public static void Deposit()
         {
             Console.WriteLine(Lang.Locale.DepositMessage);
