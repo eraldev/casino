@@ -17,7 +17,7 @@ namespace casino
             Interpreter.Command(g);
             MenuLoop();
         }
-        public static void initConsole()
+        public static void InitConsole()
         {
             Lang.Settings.SetLang(Properties.Lang.DefaultLang);
             Console.ForegroundColor = ConsoleColor.Black;
@@ -30,7 +30,7 @@ namespace casino
         static void Main(string[] args)
         {
             Game.Player.Balance = Properties.Game.DefaultBalance;
-            initConsole();
+            InitConsole();
         }
     }
 }
