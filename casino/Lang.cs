@@ -17,6 +17,7 @@ namespace casino
             public static string AboutAuthor; // Автор программы
             public static string UnknownCommand; // Выводится при вводе команды с ошибкой
             public static string Error; // Выводится при ошибке
+            public static string FormatException; // Выводится при исключении FormatException
             public static string HelpMessage; // Выводится при команде help
             public static string SelectLang; // Выводится при выборе языка
             public static string EmptyCommand; // Выводится при вводе пустой команды
@@ -28,6 +29,7 @@ namespace casino
             public static string GameWin; // Выводится при победе
             public static string GameLose; // Выводится при проигрыше
             public static string GetCash; // Выводится при снятии денег
+            public static string GetCashAll; // Выводится при снятии всех денег
             public static string SaveCash; // Выводится при сохранении денег
             public static string DepositMessage; // Выводится при команде deposit
         }
@@ -61,6 +63,7 @@ namespace casino
                 {
                     Lang.Locale.Welcome = Properties.App.Name + "\nЧтобы отобразить список команд, введите help.";
                     Lang.Locale.Error = "Ошибка";
+                    Lang.Locale.FormatException = "Входная строка имеет неверный формат.";
                     Lang.Locale.ExitCancel = "Выход отменен.";
                     Lang.Locale.Exit = "Вы собираетесь выйти из игры, что сделать с вашим выигрышем?\n 1) Вывести\n 2) Сохранить\n 3) Отмена!";
                     Lang.Locale.NotEnoughMoney = "Не хватает денег.";
@@ -71,6 +74,7 @@ namespace casino
                     Lang.Locale.EmptyCommand = "Вы не ввели команду.";
                     Lang.Locale.Currency = "UNIT's";
                     Lang.Locale.GetCash = "Вы успешно вывели {0} {1} на вашу карту 4****7777. Ваш баланс {2} {1}";
+                    Lang.Locale.GetCashAll = "Вы успешно вывели всю сумму ({0} {1}) на вашу карту 4****7777.";
                     Lang.Locale.GameBet = "Выберите на что ставить.\n 1) Нечетное\n 2) Четное";
                     Lang.Locale.GameWin = "Поздравляем, вы победили! Система создала число {3}. Вы выиграли {0} {2}, теперь ваш баланс составляет {1} {2}.";
                     Lang.Locale.GameLose = "К сожалению, вы проиграли! Система создала число {3}. Вы потеряли {0} {2}, теперь ваш баланс составляет {1} {2}.";

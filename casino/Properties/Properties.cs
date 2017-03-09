@@ -14,7 +14,7 @@ namespace casino
         }
         public class Game
         {
-            public static int DefaultBalance = 105;
+            public static int DefaultBalance = 100;
         }
         public class Lang
         {
