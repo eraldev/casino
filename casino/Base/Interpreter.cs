@@ -8,13 +8,13 @@ namespace casino
 {
     public class Interpreter
     {
-        private static void EmptyCommand()
+        private static void CommandIsEmpty()
         {
-            Console.WriteLine(Lang.Locale.EmptyCommand);
+            //Console.WriteLine(Lang.Locale.CommandIsEmpty);
         }
-        private static void UnknownCommand()
+        private static void CommandNotFound(string Command)
         {
-            Console.WriteLine("{0} : {1}.", Lang.Locale.Error, Lang.Locale.UnknownCommand);
+            Console.WriteLine(Lang.Locale.CommandNotFound, Command);
         }
         public static void Command(string EnterCommand)
         {
@@ -29,6 +29,9 @@ namespace casino
                 case "reload":
                     Base.Reload();
                     break;
+                case "clear":
+                    Base.Clear();
+                    break;
                 case "deposit":
                     Game.Deposit();
                     break;
@@ -36,7 +39,7 @@ namespace casino
                     Game.CheckBalance();
                     break;
                 case "lang":
-                    Lang.Settings.LangCommand();
+                    Lang.Settings.Command();
                     break;
                 case "play":
                     Game.Play();
@@ -45,10 +48,10 @@ namespace casino
                     Base.Exit();
                     break;
                 case "":
-                    Interpreter.EmptyCommand();
+                    Interpreter.CommandIsEmpty();
                     break;
                 default:
-                    Interpreter.UnknownCommand();
+                    Interpreter.CommandNotFound(EnterCommand);
                     break;
             }
         }

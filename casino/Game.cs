@@ -10,7 +10,7 @@ namespace casino
     {
         public class Player
         {
-            public static int Balance;
+            public static int Balance = -1;
         }
         public static void CheckBalance()
         {
@@ -64,7 +64,7 @@ namespace casino
             }
             catch(FormatException)
             {
-                Console.WriteLine("{0} : {1}",Lang.Locale.Error,Lang.Locale.FormatException);
+                Console.WriteLine("{0}: {1}",Lang.Locale.Error,Lang.Locale.FormatException);
                 return 1;
             }
             if (PlayerBet <= Game.Player.Balance)
@@ -85,7 +85,7 @@ namespace casino
             }
             else
             {
-                Console.WriteLine("{0} : {1}", Lang.Locale.Error, Lang.Locale.NotEnoughMoney);
+                Console.WriteLine("{0}: {1}", Lang.Locale.Error, Lang.Locale.NotEnoughMoney);
             }
             PlayerBet = 0;
             SystemGeneratedNumber = 0;

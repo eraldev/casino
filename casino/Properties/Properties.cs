@@ -11,6 +11,8 @@ namespace casino
         public class App
         {
             public static string Name = "Even-Odd Game";
+            public static string VersionName = "0.3";
+            public static int VersionCode = 14;
         }
         public class Game
         {
@@ -18,7 +20,10 @@ namespace casino
         }
         public class Lang
         {
-            public static string DefaultLang = "ru";
+            public static string DefaultLangCode = "ru";
+            public static string DefaultLangName = "русский";
+            public static string CurrentLangCode = Properties.Lang.DefaultLangCode;
+            public static string CurrentLangName = Properties.Lang.DefaultLangName;
         }
         public class NumberGen
         {

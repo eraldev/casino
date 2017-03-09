@@ -18,17 +18,20 @@ namespace casino
         }
         public static void InitConsole()
         {
-            Lang.Settings.SetLang(Properties.Lang.DefaultLang);
+            Lang.Settings.SetLang(Properties.Lang.DefaultLangCode);
             Console.ForegroundColor = ConsoleColor.Black;
             Console.BackgroundColor = ConsoleColor.White;
             Console.Clear();
             Console.Title = Properties.App.Name;
             Console.WriteLine(Lang.Locale.Welcome);
+            if (Game.Player.Balance == -1)
+            {
+                Game.Player.Balance = Properties.Game.DefaultBalance;
+            }
             MenuLoop();
         }
         static void Main(string[] args)
         {
-            Game.Player.Balance = Properties.Game.DefaultBalance;
             InitConsole();
         }
     }

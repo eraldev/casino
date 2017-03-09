@@ -8,10 +8,19 @@ namespace casino
 {
     public class Base
     {
-        public static void Exit()
+        public static int Exit()
         {
             Console.WriteLine(Lang.Locale.Exit);
-            int Choice = Convert.ToInt32(Console.ReadLine());
+            int Choice = 3;
+            try
+            {
+                Choice = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("{0}: {1}", Lang.Locale.Error, Lang.Locale.FormatException);
+                return 1;
+            }
             switch (Choice)
             {
                 case 1:
@@ -29,7 +38,11 @@ namespace casino
                     Console.WriteLine(Lang.Locale.Error);
                     break;
             }
-            
+            return 0;
+        }
+        public static void Clear()
+        {
+            Console.Clear();
         }
         public static void Reload()
         {
